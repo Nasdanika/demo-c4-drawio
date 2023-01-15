@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="EN">
+  <head>
+    <title>Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/css/app.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/themes/default/style.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/dark-head.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/jstree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/components/table.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BRJVLK8CC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9BRJVLK8CC');
+</script>    
+</head>
+  <body>
+    <div class="container-fluid nsd-app-container">
+      <div class="row">
+        <div class="col nsd-app-header">
+          <a href="https://www.nasdanika.org" title="Root action" data-nsd-label-uuid="07ba86af-27de-4deb-8072-8c53c977c204" class="nsd-app-header-title">
+            <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon"/>Nasdanika</a>
+          <ul class="nav nsd-app-header-navs">
+            <li class="nav-item"><span data-nsd-label-uuid="3196cc6c-d5f8-4576-9aa5-53d15e13bf08" class="navbar-text"><span class="fas fa-search nsd-app-label-icon"></span>Search</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nsd-app-navbar">
+          <ul class="navbar navbar-light navbar-expand-lg">
+            <a href="index.html" title="Principal action" data-nsd-label-uuid="bf403451-94b9-4502-9fe2-3d55c8d0ec5f" class="navbar-brand">Internet Banking System</a>
+            <button type="button" data-toggle="collapse" data-target="#nsd_37" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nsd_37" class="collapse navbar-collapse"></div>
+          </ul>
+        </div>
+      </div>
+      <div class="row nsd-app-content-row">
+        <div class="col nsd-app-navigation-panel">
+          <input type="text" id="022c0cdb-fa41-46a3-b6ce-5ee3e226ebea-navigation-panel_searchInput" title="Full-text search. You can use wildcards, e.g. 'foo*' or 'f*o'; title or content fields, e.g. 'title:foo* bar'; boosts, e.g. 'foo^10 bar'; fuzzy matches, e.g. 'foo~1'; and term presence, e.g. '+foo bar -baz'" class="form-control mt-1"/>
+          <div id="022c0cdb-fa41-46a3-b6ce-5ee3e226ebea-navigation-panel"></div>
+          <script>$(document).ready( function() {
+$('#022c0cdb-fa41-46a3-b6ce-5ee3e226ebea-navigation-panel').jstree(function(tree) { tree.state.filter = function(state) { delete state.core.selected; return state; };  tree.search.search_callback = function(searchStr, node) { if (typeof window.nsdJsTreeSearchCallback === 'function') return window.nsdJsTreeSearchCallback(searchStr, node); var sf = new $.vakata.search(searchStr, true, { caseSensitive : false, fuzzy : false }); return sf.search(node.text).isMatch; }; return tree; }({"core":{"data":[{"a_attr":{"onclick":"window.location='customer.html';"},"data-nsd-label-uuid":"01cc6a0e-7e7c-4537-9997-eea95478fac4","icon":"fas fa-user","id":"nsd-app-nav-item-e05c4f53-6bbe-442b-a2b3-fcc2bdcc8bf3","text":"Customer","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/index.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/web/index.html';"},"data-nsd-label-uuid":"b1b66bfb-b206-4f82-809f-c5b4af069207","id":"nsd-app-nav-item-e31efe1e-bd1f-4be8-bc32-b9dbce77a5f3","text":"Web","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/spa/index.html';"},"data-nsd-label-uuid":"1f642af1-768a-4713-a536-a737f19b2a2f","id":"nsd-app-nav-item-06037a8a-80a6-4d18-863d-5d57a8a86f78","text":"Single-Page","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/mobile/index.html';"},"data-nsd-label-uuid":"926f5b32-4800-43ce-abbb-1845d2ef3126","icon":"fas fa-mobile-alt","id":"nsd-app-nav-item-4b18b129-61b8-43c1-a622-f71cd128d431","text":"Mobile","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/api/index.html';"},"children":[{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/api/controllers/sign-in/index.html';"},"data-nsd-label-uuid":"b53d90ff-bb3d-43e2-add7-f096441f004b","id":"nsd-app-nav-item-2c774de7-e599-4953-8801-13ff3e009434","text":"Sign In Controller","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/api/controllers/accounts-summary/index.html';"},"data-nsd-label-uuid":"0a8d68b8-b76f-4853-8923-05ad46b5d62a","id":"nsd-app-nav-item-44bca75c-fb63-48bb-b568-df3ce0b9fbcf","text":"Accounts Summary Controller","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/api/beans/security-component/index.html';"},"data-nsd-label-uuid":"2312f659-ff6d-4d3f-a5a7-37a91a251e5f","id":"nsd-app-nav-item-7480d929-5f80-45e6-8091-a9c196d80d27","text":"Security Component","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/api/facades/mainframe/index.html';"},"data-nsd-label-uuid":"0f29e718-55c7-4119-be0d-5eaaa529d5b6","id":"nsd-app-nav-item-c5f32046-fd97-44e9-ab1c-bc7e297083d5","text":"Mainframe Banking System Facade","type":"leaf"}],"data-nsd-label-uuid":"f042b33c-2301-499b-baa2-ca4a49e09245","id":"nsd-app-nav-item-41467697-ea11-4663-9146-4b5728d2b1ed","text":"API"}],"icon":"fas fa-server","id":"nsd_3h","text":"Applications"},{"a_attr":{"onclick":"window.location='systems/internet-banking/database/index.html';"},"data-nsd-label-uuid":"05f53229-61df-422f-bcf2-c839fe32284f","icon":"fas fa-database","id":"nsd-app-nav-item-524ae398-a3f2-485e-a2cf-9a4b0ceff618","text":"Database","type":"leaf"}],"data-nsd-label-uuid":"f9b09c4e-c487-4f9f-b32c-f98badc20865","id":"nsd-app-nav-item-2dcf5dae-371e-4638-8891-a55ba37eff4d","text":"Internet Banking System"},{"a_attr":{"onclick":"window.location='systems/external/e-mail.html';"},"data-nsd-label-uuid":"33109cb9-c981-4999-a8c9-d8aa4a694068","id":"nsd-app-nav-item-cccbb6ab-52dd-4176-a4d1-af43ca86034b","text":"E-mail system","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/external/mainframe.html';"},"data-nsd-label-uuid":"b3a705cc-a66f-496b-96e2-f43c491e6c43","id":"nsd-app-nav-item-8d83f5ea-431c-4fd2-90f2-8a69343d33a6","text":"Mainframe Banking System","type":"leaf"}]},"search":{"show_only_matches":true,"show_only_matches_children":true},"types":{"leaf":{"icon":"jstree-file"}},"plugins":["state","type","search"],"state":{"key":"022c0cdb-fa41-46a3-b6ce-5ee3e226ebea-navigation-panel"}}));
+// Tokens: searchInputSelector, timer, treeSelector
+$('#022c0cdb-fa41-46a3-b6ce-5ee3e226ebea-navigation-panel_searchInput').keyup(function () {
+    if (window['nsd_jstTreeSearchTimer_nsd_3m']) { 
+		clearTimeout(window['nsd_jstTreeSearchTimer_nsd_3m']); 
+	}
+    window['nsd_jstTreeSearchTimer_nsd_3m'] = setTimeout(function () {
+      var v = $('#022c0cdb-fa41-46a3-b6ce-5ee3e226ebea-navigation-panel_searchInput').val();
+      $('#022c0cdb-fa41-46a3-b6ce-5ee3e226ebea-navigation-panel').jstree(true).search(v);
+    }, 250);
+  });
+
+});</script>
+        </div>
+        <div data-nsd-label-uuid="3196cc6c-d5f8-4576-9aa5-53d15e13bf08" class="col nsd-app-content-panel">
+          <div class="container-fluid">
+            <div class="row nsd-app-content-panel-title-and-items-row">
+              <div class="col-auto">
+                <H1><span data-nsd-label-uuid="3196cc6c-d5f8-4576-9aa5-53d15e13bf08" class="nsd-app-content-panel-title"><span class="fas fa-search nsd-app-label-icon"></span>Search</span>
+                </H1>
+              </div>
+            </div>
+            <div class="row nsd-app-content-panel-content-row">
+              <div class="col">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">		<script src="https://unpkg.com/lunr/lunr.js"></script>     
+		<script src="search-documents.js"></script>     
+		<!-- TODO - tree binding script here site-map-tree.js -->
+     	<div id="search-app" class="container-fluid">
+     		<div class="row">
+     			<div class="col">
+					<b-form-group
+			          label="Filter"
+			          label-for="filter-input"
+			          label-cols-sm="3"
+			          label-align-sm="right"
+			          label-size="sm"
+			          class="mb-0"
+					  description="You can use wildcards, e.g. 'foo*' or 'f*o'; title or content fields, e.g. 'title:foo* bar'; boosts, e.g. 'foo^10 bar'; fuzzy matches, e.g. 'foo~1'; and term presence, e.g. '+foo bar -baz'"	          
+			        >
+			          <b-input-group size="sm">
+			            <b-form-input
+			              id="filter-input"
+			              v-model="filter"
+			              type="search"
+			              placeholder="Type to Search"
+			            ></b-form-input>
+			
+			            <b-input-group-append>
+			              <b-button :disabled="!filter" @click="filter = ''">Clear</b-button>
+			            </b-input-group-append>
+			          </b-input-group>
+			        </b-form-group>		
+     			</div>     		
+     		</div>
+	        
+	        <div class="row flex-nowrap">
+	        	<div class="col-auto border-right border-secondary pb-1">
+	        		<div id="nsd-site-map-tree">
+	        		</div>
+	        	</div>
+	        	<div class="col">
+			        <b-card 
+			        	v-for="searchResult in searchResults" 
+			        	:header-html="searchResult.title" 
+			        	:footer="searchResult.path"
+			        	class="my-1"
+			        	>
+			        	
+			        	<b-card-text><span v-html="searchResult.content"></span></b-card-text>
+			        </b-card>
+	        	</div>
+	        </div>	        
+     	</div>
+     
+		<script>		      
+			new Vue({
+				  el: '#search-app',
+				  data: {
+			        	filter: null,
+				      searchIndex : lunr(function () {
+						  this.ref('url');
+						  this.field('title');
+						  this.field('content');
+						  this.metadataWhitelist = ['position'];
+	
+						  for (const key in searchDocuments) {
+							  let doc = searchDocuments[key];
+							this.add({
+								url: key,
+								title: doc.title,
+								path: doc.path,
+								content: doc.content
+							});  
+						  }
+						})
+				  },				  
+				  computed: {
+					searchResults: function() {
+						if (this.filter) {
+							let searchResult = this.searchIndex.search(this.filter);
+							let actionUuids = searchResult.map(match => searchDocuments[match.ref]['action-uuid']).join(" ");
+							setTimeout(() => {
+								let treeSearchCallback = $('#nsd-site-map-tree').jstree(true).search;
+								if (treeSearchCallback) {
+									$('#nsd-site-map-tree').jstree(true).search(actionUuids);								
+								}
+							});
+							
+							return searchResult.map(function(e) {
+								let doc = searchDocuments[e.ref];
+								let titleMatches = [];
+								let contentMatches = [];
+								let matchMetaData = e.matchData.metadata;
+								for (const term in matchMetaData) {
+									if (matchMetaData[term]['title']) {
+										let positions = matchMetaData[term]['title'].position;
+										for (const match in positions) {
+											titleMatches.push(positions[match]);
+										}										
+									}
+									if (matchMetaData[term]['content']) {
+										let positions = matchMetaData[term]['content'].position;
+										for (const match in positions) {
+											contentMatches.push(positions[match]);
+										}										
+									}
+								}
+								
+								// Title highlighting
+								titleMatches.sort(function (a, b) { return a[0] - b[0] });
+								let titleElements = [];
+								let idx = 0;
+								for (const matchIdx in titleMatches) {
+									let match = titleMatches[matchIdx];
+									if (match[0] > idx) {
+										titleElements.push(doc.title.substring(idx, match[0]));
+									}
+									idx =  match[0] + match[1];
+									titleElements.push(`<span class='nsd-mark'>${doc.title.substring(match[0], idx)}</span>`);
+								}
+								if (idx < doc.title.length - 1) {
+									titleElements.push(doc.title.substring(idx, doc.title.length));
+								}
+								
+								// Content ellipsing and highlighting
+								contentMatches.sort(function (a, b) { return a[0] - b[0] });
+								let contentElements = [];
+								let snippetLength = 10;
+								idx = 0;
+								for (const matchIdx in contentMatches) {
+									let match = contentMatches[matchIdx];
+									if (match[0] > idx) {
+										let words = doc.content.substring(idx, match[0]).split(' ');
+										let snippetedWords = [];
+										if (idx == 0) {
+											if (words.length <= snippetLength) {
+												snippetedWords = words;
+											} else {
+												snippetedWords.push("&hellip;");
+												words.slice(words.length - snippetLength, words.length).forEach(e => snippetedWords.push(e));
+											}
+										} else {
+											if (words.length <= snippetLength * 2) {
+												snippetedWords = words;
+											} else {
+												words.slice(0, snippetLength).forEach(e => snippetedWords.push(e));
+												snippetedWords.push("&hellip;");
+												words.slice(words.length - snippetLength, words.length).forEach(e => snippetedWords.push(e));
+											}
+											
+										}
+										contentElements.push(snippetedWords.join(' '));
+									}
+									idx =  match[0] + match[1];
+									contentElements.push(`<span class='nsd-mark'>${doc.content.substring(match[0], idx)}</span>`);
+								}
+								if (idx < doc.content.length - 1) {
+									let words = doc.content.substring(idx, doc.content.length).split(' ');
+									if (idx == 0) {
+										if (words.length < snippetLength * 2) {
+											contentElements.push(doc.content);
+										} else {
+											let snippetedWords = [];
+											words.slice(0, snippetLength * 2).forEach(e => snippetedWords.push(e));
+											snippetedWords.push("&hellip;");
+											contentElements.push(snippetedWords.join(' '));
+										}
+									} else {
+										let snippetedWords = [];
+										if (words.length <= snippetLength) {
+											snippetedWords = words;
+										} else {
+											words.slice(0, snippetLength).forEach(e => snippetedWords.push(e));
+											snippetedWords.push("&hellip;");
+										}
+										contentElements.push(snippetedWords.join(' '));
+									}
+								}
+								return {
+									title: `<h5><a href="${e.ref}">${titleElements.join('')}</a></h5>`,
+									path: doc.path,
+									content: contentElements.join('')
+								};									
+							});
+						} 
+						setTimeout(() => {
+							let treeSearchCallback = $('#nsd-site-map-tree').jstree(true).search;
+							if (treeSearchCallback) {
+								$('#nsd-site-map-tree').jstree(true).search('');								
+							}
+						});
+						return [];
+					}  
+				  }
+			});   			
+		</script>
+		
+
+<script>$(document).ready( function() {
+$('#nsd-site-map-tree').jstree(function(tree) { tree.state.filter = function(state) { delete state.core.selected; return state; }; tree.search.search_callback = (results, node) => results.split(' ').includes(node.original['data-nsd-label-uuid']); return tree; }({"core":{"data":[{"a_attr":{"onclick":"window.location='https://www.nasdanika.org';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='index.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='customer.html';"},"data-nsd-label-uuid":"01cc6a0e-7e7c-4537-9997-eea95478fac4","icon":"fas fa-user","id":"5a67c716-972b-40f0-92b2-a113f2ecd2e3","text":"Customer","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/index.html';"},"children":[{"children":[{"children":[{"children":[{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/web/index.html';"},"data-nsd-label-uuid":"b1b66bfb-b206-4f82-809f-c5b4af069207","id":"d22b9ca3-69a3-40c9-b279-7a7d742c60c5","text":"Web","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/spa/index.html';"},"data-nsd-label-uuid":"1f642af1-768a-4713-a536-a737f19b2a2f","id":"5889edfc-cb0a-4933-a99b-2a9ac43803a1","text":"Single-Page","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/mobile/index.html';"},"data-nsd-label-uuid":"926f5b32-4800-43ce-abbb-1845d2ef3126","icon":"fas fa-mobile-alt","id":"68c2c602-194a-4fa1-9094-8b4ad7d1d547","text":"Mobile","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/api/index.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/api/controllers/sign-in/index.html';"},"data-nsd-label-uuid":"b53d90ff-bb3d-43e2-add7-f096441f004b","id":"6cf88b45-a384-4210-8154-c518ae4a3615","text":"Sign In Controller","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/api/controllers/accounts-summary/index.html';"},"data-nsd-label-uuid":"0a8d68b8-b76f-4853-8923-05ad46b5d62a","id":"33168391-034d-4703-89e8-2d5225d6b8a6","text":"Accounts Summary Controller","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/api/beans/security-component/index.html';"},"data-nsd-label-uuid":"2312f659-ff6d-4d3f-a5a7-37a91a251e5f","id":"1068dbaa-a10e-40f4-b434-8738e63c4c86","text":"Security Component","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/applications/api/facades/mainframe/index.html';"},"data-nsd-label-uuid":"0f29e718-55c7-4119-be0d-5eaaa529d5b6","id":"b2a768a2-9f3f-44f2-9fee-3e154808dc6e","text":"Mainframe Banking System Facade","type":"leaf"}],"text":"Children"}],"data-nsd-label-uuid":"f042b33c-2301-499b-baa2-ca4a49e09245","id":"50191888-2f8a-40fc-a486-e7ec346dca32","text":"API","type":"leaf"}],"text":"Children"}],"data-nsd-label-uuid":"ece06324-54d6-42aa-a328-a535b00b9ef2","icon":"fas fa-server","id":"nsd_2","text":"Applications","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/internet-banking/database/index.html';"},"data-nsd-label-uuid":"05f53229-61df-422f-bcf2-c839fe32284f","icon":"fas fa-database","id":"e1c09c92-2a37-4b88-a72f-4ba2929b3209","text":"Database","type":"leaf"}],"text":"Children"}],"data-nsd-label-uuid":"f9b09c4e-c487-4f9f-b32c-f98badc20865","id":"219f71df-1376-46a8-869d-adad1b7f3479","text":"Internet Banking System","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/external/e-mail.html';"},"data-nsd-label-uuid":"33109cb9-c981-4999-a8c9-d8aa4a694068","id":"d0256378-bbf0-4c15-a94a-f6ff50312afa","text":"E-mail system","type":"leaf"},{"a_attr":{"onclick":"window.location='systems/external/mainframe.html';"},"data-nsd-label-uuid":"b3a705cc-a66f-496b-96e2-f43c491e6c43","id":"047f47a5-70b7-4907-8acc-c9768d6b22b3","text":"Mainframe Banking System","type":"leaf"}],"text":"Children"}],"data-nsd-label-uuid":"bf403451-94b9-4502-9fe2-3d55c8d0ec5f","id":"34500bcd-98ba-4139-9455-8860d0c7ac4b","text":"Internet Banking System","type":"leaf"},{"data-nsd-label-uuid":"3196cc6c-d5f8-4576-9aa5-53d15e13bf08","icon":"fas fa-search","id":"c064ff83-f505-4f22-b789-a71f1d712e35","text":"Search","type":"leaf"}],"text":"Children"},{"children":[{"a_attr":{"onclick":"window.location='https://github.com/Nasdanika/demo-action-site';"},"data-nsd-label-uuid":"13512d85-46a4-4ba8-859e-60de0d93a1a2","icon":"fab fa-github","id":"6df942cb-7dc9-4210-8b95-cbb9dd2575b5","text":"Source","type":"leaf"}],"text":"Navigation"}],"data-nsd-label-uuid":"07ba86af-27de-4deb-8072-8c53c977c204","icon":"https://docs.nasdanika.org/images/nasdanika-logo.png","id":"f1aea241-d05f-46ea-869d-e052dfb568d5","text":"Nasdanika","type":"leaf"}]},"search":{"show_only_matches":true},"plugins":["state","search"],"state":{"key":"nsd-site-map-tree"}}));
+});</script>
+				
+		</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nsd-app-footer">
+          <ul class="nav nsd-app-footer-navs">
+            <li class="nav-item">
+              <a href="https://github.com/Nasdanika/demo-action-site" data-nsd-label-uuid="13512d85-46a4-4ba8-859e-60de0d93a1a2" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Source</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
