@@ -8,21 +8,24 @@ app-action:
         text: Internet Banking System
         location: ${base-uri}index.html 
         tooltip: Principal action
-        representations:
-          context: context.drawio
         content:
           content-markdown: 
             source:
               content-text: |+2
                 This is a demo of a web site generated from an action model with Drawio [C4](https://c4model.com/) representations.
                 Diagram elements below are linked to the pages (actions) of respective components. 
-                
-                ```drawio
-                ${representations/context/diagram}
-                ```
-                
-                Detailed description goes here.
-                
+        sections:
+          - text: Context
+            representations:
+              context: context.drawio
+            content:
+              content-markdown: 
+                source:
+                  content-text: |+2
+                    ```drawio
+                    ${representations/context/diagram}
+                    ```
+                  
         children:
           - app-action:
               icon: fas fa-user
