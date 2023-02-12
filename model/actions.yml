@@ -55,20 +55,25 @@ app-action:
                 - app-label:
                     text: Applications
                     icon: fas fa-server
+                    uris: applications
                     children:
                       - app-action:
                           text: Web
                           location: applications/web/index.html
+                          uris: web
                       - app-action:
                           text: Single-Page
                           location: applications/spa/index.html
+                          uris: spa
                       - app-action:
                           text: Mobile
                           icon: fas fa-mobile-alt
                           location: applications/mobile/index.html
+                          uris: mobile
                       - app-action:
                           text: API
                           location: applications/api/index.html
+                          uris: api
                           representations:
                             component: systems/internet-banking/applications/api/component.drawio
                           content:
@@ -80,21 +85,25 @@ app-action:
                           children:
                             - app-action:
                                 text: Sign In Controller
-                                location: controllers/sign-in/index.html                           
+                                location: controllers/sign-in/index.html
+                                uris: controllers/sign-in                           
                             - app-action:
                                 text: Accounts Summary Controller
                                 location: controllers/accounts-summary/index.html                           
+                                uris: controllers/account-summary                           
                             - app-action:
                                 text: Security Component
                                 location: beans/security-component/index.html                           
+                                uris: beans/security-component                           
                             - app-action:
                                 text: Mainframe Banking System Facade
                                 location: facades/mainframe/index.html                           
+                                uris: facades/mainframe                           
                 - app-action:
                     text: Database
                     icon: fas fa-database
                     location: database/index.html
-                                        
+                    uris: database                    
           - app-action:
               text: E-mail system
               uris: nasdanika://e-mail
